@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Akıllı Ev Otomasyon Sistemi</title>
+</head>
+
+<body>
+
+
+  <!-- Navbar Kısmı -->
+  <nav>
+    <div class="nav__header">
+      <div class="nav__logo"> <!-- <a href="#">Akıllı Ev<span><br>Otomasyon Sistemi</span></a>--> </div>
+      <div class="nav__menu__btn" id="menu-btn"> <i class="ri-menu-3-line"></i> </div>
+    </div>
+    <div class="nav-menu" id="nav-menu">
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">Anasayfa</a></li>
+        <li><a href="#team" class="dropdown-link">Ekip Üyeleri</a></li>
+        <li><a href="#technical-details">Teknik Detaylar</a></li>
+        <li><a href="#project-processes">Proje Süreçleri</a></li>
+        <li><a href="#gallery">Galeri</a></li>
+        <li><a href="#presentation">Sunum ve Poster</a></li>
+      </ul>
+    </div>
+    <div class="nav__btns"> <button class="btn" onclick="toggleDarkMode()">Dark Mode</button> </div>
+  </nav>
+
+
+  <!-- Anasayfa Bölümü -->
+  <header class="section__container header__container" id="home">
+    <div class="header__content">
+      <h1>Yaşamınızı Kolaylaştıran <span>Akıllı Teknoloji</span></h1>
+      <p class="section__description">
+        Akıllı ev sistemimiz, bitkilerin sulama ihtiyaçlarını ve ev güvenliğini tek bir platformda yönetir.
+        Bitkilerinizin ihtiyaç duyduğu zamanda su almasını sağlarken aynı zamanda
+        uzaktan kontrolünü sağlayabileceğiniz güvenlik sistemimiz, evinizin güvenliğini en üst düzeye çıkarır.
+        Hem doğayı koruyun
+        hem de evinizi güvende tutun!
+      </p>
+      <form action="https://anlik-veriler.vercel.app/" method="get">
+        <div class="input__group"> <label for="location">Canlı durumu kontrol etmek için </label> </div> <button
+          class="btn"><i class=""></i>tıkla</button>
+      </form>
+    </div>
+    <div class="header__image">
+      <img src="resim/yuz-tanima.jpg" alt="header" />
+      <img src="resim/bitki.jpg" alt="header" />
+      <img src="resim/ev1.jpg" alt="header" />
+      <!-- <img src="assets/bg.png" alt="bg" /> -->
+    </div>
+  </header>
+
+  <!-- Ekip Üyeleri Kısmı -->
+  <section class="section__container client__container" id="team">
+    <img src="dosya/bg.png" alt="bg" class="client__bg" />
+    <h2 class="section__header">Ekip <span>Üyelerimiz</span></h2>
+    <div class="client__card active">
+      <img src="resim/yaren.jpg" alt="client" />
+      <div class="client__content">
+        <h4>Yaren Unat</h4>
+        <h5>2022141013</h5>
+        <p>
+          Web Sitesi Tasarımı | Visual Studio kullanarak HTML ve CSS kodlarını yazdı, JavaScript kodları ekleyerek
+          estetik ve kullanıcı dostu bir site oluşturdu.
+        </p>
+      </div>
+    </div>
+    <div class="client__card">
+      <img src="resim/emin.jpg" alt="client" />
+      <div class="client__content">
+        <h4>Emin Yılmaz</h4>
+        <h5>2022141019</h5>
+        <p>
+          Akıllı Sulama Sistemi Entegrasyonu | Kurulan sistemin akıllı sulama bölümündeki entegrasyonları ve kodları
+          yöneterek verimli ve otomatik bir sulama çözümü geliştirdi.
+        </p>
+      </div>
+    </div>
+    <div class="client__card">
+      <img src="resim/recep.jpg" alt="client" />
+      <div class="client__content">
+        <h4>Recep Eken</h4>
+        <h5>2022141035</h5>
+        <p>
+          Akıllı Ev Sistemi Entegrasyonu ve Mobil Uygulama Geliştirme | Kurulan sistemin akıllı ev bölümündeki
+          entegrasyonları ve kodları
+          yönetti. Ayrıca, akıllı ev sistemiyle uyumlu bir mobil uygulama geliştirdi.
+        </p>
+      </div>
+    </div>
+    <div class="client__card">
+      <img src="resim/numan.jpg" alt="client" />
+      <div class="client__content">
+        <h4>Numan Yıldız</h4>
+        <h5>2022141041</h5>
+        <p>
+          Sunum Hazırlama | Kapsamlı bir sunum dosyası
+          hazırlayarak projenin tanıtımını ve anlaşılmasını sağladı.
+        </p>
+      </div>
+    </div>
+    <div class="client__card">
+      <img src="resim/serife.jpeg" alt="client" />
+      <div class="client__content">
+        <h4>Şerife Ünnü</h4>
+        <h5>2022141053</h5>
+        <p>
+          Poster ve Rapor Hazırlama | Projenin poster ve raporunu hazırlayarak, yapılan çalışmaları görsel ve yazılı
+          olarak etkili bir şekilde sundu.
+        </p>
+      </div>
+    </div>
+    <div class="client__btns">
+      <button class="btn" id="prev">
+        <i class="ri-arrow-left-line"></i>
+      </button>
+      <button class="btn" id="next">
+        <i class="ri-arrow-right-line"></i>
+      </button>
+    </div>
+  </section>
+
+
+  <!-- Teknik Detaylar Bölümü -->
+  <section class="section__container popular__container" id="technical-details">
+    <h3 alt="bg" class="popular__bg">daha fazlası için yana kaydırınız</h3>
+    <h2 class="section__header"><span>Teknik </span>Detaylar</h2>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/Raspberry Pi 4 - 4GB - 2.jpg" alt="popular" />
+            <div class="popular__content">
+              <h4>Raspberry Pi 4 </h4>
+              <p>Raspberry pi bir tek kart bilgisayardır. işlemci, RAM bellek, giriş/çıkışlar gibi tüm birimler tek bir
+                devre kartı üzerinde toplanmıştır.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/Raspberry Pi 4 Lisanslı Güç Adaptörü 5V 3A.jpg" alt="popular" />
+            <div class="popular__content">
+              <h4>Raspberry Pi 4 Güç Adaptörü </h4>
+              <p>Cihazın güvenli ve stabil çalışmasını sağlamak için gerekli enerjiyi
+                sağlar. </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/2 Kanal 5 V Röle Kartı.jpg" alt="popular" />
+            <div class="popular__content">
+              <h4>2 Kanal 5 V Röle Kartı</h4>
+              <p>2 kanal role kontrol kartı, 5V ile kontakların kontrol edilebildiği mikrodenetleyeciler ile
+                kullanılabilen bir röle kartıdır.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/Mini Dalgıç Su Pompası.jpg" alt="popular" />
+            <div class="popular__content">
+              <h4>Mini Dalgıç Su Pompası</h4>
+              <p>Düşük güç tüketimine sahip olan su aktarma motoru ile su ve yağ gibi sıvıları aktarabilirsiniz. 6V 120
+                Litre/Saat</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/Solenoid Kapı Kİlidi.jpg" alt="popular" />
+            <div class="popular__content">
+              <h4>Solenoid Kapı Kilidi</h4>
+              <p>Solenoid kapı kilidi, elektromanyetik bir mekanizma kullanarak kapıları güvenli bir şekilde kilitleme
+                ve açma işlevi görür.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/regulator.png" alt="popular" />
+            <div class="popular__content">
+              <h4>Regülatör</h4>
+              <p>Regülatör, elektrik veya elektronik devrelerde voltaj veya akımı sabit bir değerde tutarak cihazların
+                güvenli ve düzgün çalışmasını sağlar.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/webcam.jpg" alt="popular" />
+            <div class="popular__content">
+              <h4>Webcam Kamera</h4>
+              <p>Webcam kameralar, bilgisayarlar veya diğer cihazlarla bağlantı kurarak canlı video ve görüntü aktarımı
+                sağlar.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/Yanıcı Gaz ve Sigara Dumanı Sensör Kartı MQ-2.jpg" alt="popular" />
+            <div class="popular__content">
+              <h4>Yanıcı Gaz ve Sigara Dumanı Sensör Kartı MQ-2</h4>
+              <p>Ortamda yanıcı gaz ve sigara dumanını algılayan bir
+                sensördür. 300 ile 10.000 ppm aralığında konsantrasyonları tespit eder ve 5V ile çalışır.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/Ses Sensör Kartı - Mikrofon Sensörü.jpg" alt="popular" />
+            <div class="popular__content">
+              <h4>Ses Sensör Kartı - Mikrofon Sensörü</h4>
+              <p>Ortamdaki ses seviyelerini algılayarak elektronik projelerde
+                kullanılmak üzere ses verisi sağlar. Bu sensör, mikrofon aracılığıyla ses dalgalarını elektrik
+                sinyallerine çevirir ve dijital çıkış verir.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/HC-SR501 Ayarlanabilir IR Hareket Algılama Sensörü - Pir.jpg" alt="popular" />
+            <div class="popular__content">
+              <h4>HC-SR501 Ayarlanabilir IR Hareket Algılama Sensörü </h4>
+              <p>Pasif kızılötesi (PIR) teknolojisi kullanarak
+                hareketleri algılar. Arduino gibi mikrodenetleyici platformlarına entegre edilebilir ve hareket algılama
+                alanını 3 ila 5 metre arasında ayarlayabilir.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/Hava Kalite Sensörü MQ-135.jpg" alt="popular" />
+            <div class="popular__content">
+              <h4>Hava Kalite Sensörü MQ-135</h4>
+              <p>Hava Kalite Sensörü MQ-135
+                Ev ve ofis ortamlarında kullanılmak üzere tasarlanmıştır. NH3, NOx, alkol
+                buharı, benzen, duman ve CO2 gazlarının miktarını ölçerek hava kalitesini analiz eder.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/Toprak Nemi Algılama Sensörü.jpg" alt="popular" />
+            <div class="popular__content">
+              <h4>Toprak Nemi Algılama Sensörü</h4>
+              <p>Toprak nem sensörü, toprağın içerisindeki nem miktarını veya ufak ölçekte bir sıvının seviyesini ölçmek
+                için kullanabileceğiniz bir sensördür.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/Su Seviyesi Sensörü.jpg" alt="popular" />
+            <div class="popular__content">
+              <h4>Su Seviyesi Sensörü</h4>
+              <p>Bu sensör, hem sığ sular için su seviyesi(40mm'ye kadar) ölçüm sensörü hem de yağmur sensörü olarak
+                kullanılabilmektedir. fBirbirine paralel olarak çekilmiş iletken hatların su ile teması sonucu sensör
+                çıkış pininde analog bir değer okunabilmektedir.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/DHT11 Sıcaklık ve Nem Sensörü.jpg" alt="popular" />
+            <div class="popular__content">
+              <h4>DHT11 Sıcaklık ve Nem Sensörü</h4>
+              <p> DHT11 sıcaklık ve nem algılayıcı kalibre edilmiş dijital sinyal çıkışı veren gelişmiş bir algılayıcı
+                birimidir.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/Büyük Boy BreadBoard.jpg" alt="popular" />
+            <div class="popular__content">
+              <h4>BreadBoard </h4>
+              <p>Lehim gerektirmeden elektronik bileşenlerin kolayca bağlanmasını sağlar. Prototip devreleri
+                oluşturmak için kullanılır.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/E-D Jumper Kablo.jpg" alt="popular" />
+            <div class="popular__content">
+              <h4>Jumper Kablo</h4>
+              <p>Bileşenler arasında bağlantı kurmak için kullanılır. Breadboard ve modüllerle kolayca
+                bağlantı sağlar.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="popular__card">
+            <img src="malzemeler/1.4 W 10K Direnç Paketi - 10 Adet.jpg" alt="popular" />
+            <div class="popular__content">
+              <h4>1.4 W 10K Direnç Paketi</h4>
+              <p>10 kilo-ohm direnç değerine sahip 1.4 watt güçlü dirençler içerir. Genellikle
+                elektronik devrelerde kullanılır ve aşırı akımı önlemek için gereklidir.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="download-section" id="malzemeler">
+      <h3>Malzeme listesinin tamamı için <a href="dosya/Kullanılan Malzeme Listesi.pdf"
+          download><span>tıklayınız.</span></a><br><br>
+      </h3>
+    </div>
+  </section>
+
+
+  <!-- Proje Süreçleri Bölümü -->
+  <section class="section__container choose__container" id="project-processes">
+    <p class="section__header"><span>Proje </span>Süreçleri</p>
+    <br><br>
+    <!-- sol -->
+    <div class="choose__image"> <br><br>
+      <img src="malzemeler/Raspberry Pi 4 - 4GB - 2.jpg" alt="choose" />
+    </div>
+    <div class="choose__content">
+      <h2 class="project-processes-text">Raspberry Pi 4</h2>
+      <ul class="choose__list">
+        <div>
+          <p>Raspberry Pi Imager kullanılarak bir SD kart üzerine Raspberry Pi OS kurulumu yapıldı. Kurulum sırasında,
+            konfigürasyon ayarlarına girilerek SSH bağlantısı etkinleştirildi. Ardından modemin SSID ve şifresi girildi
+            ve Raspberry Pi için kullanıcı adı ile şifre belirlendi. Konfigürasyon tamamlandıktan sonra, SD kart
+            Raspberry Pi'ye takıldı ve cihazın çalışması için güç verildi. SSH bağlantısı için PuTTY uygulaması
+            kullanılarak Raspberry Pi'ye bağlanıldı. Ardından, raspi-config arayüzüne girilerek, interface ayarlarından
+            VNC arayüzü etkinleştirildi. RealVNC uygulaması ile Raspberry Pi'nin masaüstü arayüzüne uzaktan erişim
+            sağlandı. "myproject" adlı bir dosya oluşturuldu ve Python3 kullanılarak röle, toprak nem sensörü ve
+            sıcaklık nem sensörü için ayrı ayrı kodlar yazıldı ve her biri tek tek test edildi. Kodlar daha sonra tek
+            bir sınıfta birleştirilerek, bu sensörler arasında bağlantılar kuruldu. Son olarak, basit bir kullanıcı
+            arayüzü tasarlandı ve bu arayüz yerel ağda yayınlandı. Program dosyaları bir web sunucusuna yüklendi ve bir
+            domain adı satın alındı. Sunucuda kodlar çalıştırıldı ve projenin genel kullanıcılara açık hale gelmesi
+            sağlandı.</p>
+        </div>
+      </ul>
+    </div>
+  </section>
+  <!-- sağ -->
+  <section class="section__container explore__container">
+    <div class="explore__image">
+      <img src="malzemeler/2 Kanal 5 V Röle Kartı.jpg" alt="explore" />
+    </div>
+    <div class="explore__content">
+      <h2 class="project-processes-text">2 Kanal 5 V Röle Kartı</h2>
+      <p class="choose__list">
+        Rölenin VCC pini, breadboard üzerindeki 5V güç çıkışına, GND pini ise breadboard üzerindeki ground pinine
+        bağlandı. Breadboard üzerinden gelen güç kaynağı rölenin COM terminaline, pompanın bir ucu ise rölenin NO
+        (Normalde Açık) terminaline bağlandı. Pompa motorunun diğer ucu doğrudan breadboard üzerindeki güç kaynağına
+        bağlanarak devre tamamlandı. Son olarak, rölenin data çıkışı Raspberry Pi'nin uygun bir GPIO pinine bağlandı.
+        Yazılan program kodu sayesinde, rölenin kontrolü toprak nem sensöründen alınan verilere göre gerçekleştirildi.
+        Bu sistem, sulama pompasının otomatik olarak çalışmasını sağladı.
+      </p>
+    </div>
+  </section><!-- sol -->
+  <section class="section__container choose__container" id="project-processes">
+    <div class="choose__image"> <br><br>
+      <img src="malzemeler/Mini Dalgıç Su Pompası.jpg" alt="choose" />
+    </div>
+    <div class="choose__content">
+      <h2 class="project-processes-text">Mini Dalgıç Su Pompası</h2>
+      <ul class="choose__list">
+        <div>
+          <p>Su pompasının güç bağlantıları, röle kartı ile breadboard üzerinde yapıldı. Toprak nem sensöründen alınan
+            verilere göre röle kartı etkinleştirildi ve su pompasının çalışması sağlandı. Saksı üzerinde bir hortum
+            yerleştirilerek, pompa sayesinde bitkinin sulanması otomatik hale getirildi. Bu sistem, bitkinin su
+            ihtiyacını sensör verilerine göre kontrol ederek sulama işlemini gerçekleştirdi.</p>
+        </div>
+      </ul>
+    </div>
+  </section>
+  <!-- sağ -->
+  <section class="section__container explore__container">
+    <div class="explore__image">
+      <img src="malzemeler/Yanıcı Gaz ve Sigara Dumanı Sensör Kartı MQ-2.jpg" alt="explore" />
+    </div>
+    <div class="explore__content">
+      <h2 class="project-processes-text">Yanıcı Gaz ve Sigara Dumanı Sensör Kartı MQ-2</h2>
+      <p class="choose__list">
+        Yanıcı gaz sensörünü, dijital çıkış gerektiğinde D0 pinini kullanarak bağladık. Ancak ppm değeri ölçmek
+        istediğimizde, A0 pinini kullanarak analog çıkış elde ettik. Sensörü, evdeki yanıcı gaz seviyesi normalin
+        üzerine çıktığında uyarı verecek şekilde yapılandırdık.
+      </p>
+    </div>
+  </section>
+  <!-- sol -->
+  <section class="section__container choose__container" id="project-processes">
+    <div class="choose__image"> <br><br>
+      <img src="malzemeler/Ses Sensör Kartı - Mikrofon Sensörü.jpg" alt="choose" />
+    </div>
+    <div class="choose__content">
+      <h2 class="project-processes-text">Ses Sensör Kartı - Mikrofon Sensörü</h2>
+      <ul class="choose__list">
+        <div>
+          <p>Ses sensörü kartını, evde herhangi bir yüksek ses algılandığında uyarı verecek şekilde kullandık. Bu
+            sayede, olası bir acil durumda sistemin "Evde yüksek ses algılandı" şeklinde bir uyarı göndermesini
+            sağladık.</p>
+        </div>
+      </ul>
+    </div>
+  </section>
+  <!-- sağ -->
+  <section class="section__container explore__container">
+    <div class="explore__image">
+      <img src="malzemeler/HC-SR501 Ayarlanabilir IR Hareket Algılama Sensörü - Pir.jpg" alt="explore" />
+    </div>
+    <div class="explore__content">
+      <h2 class="project-processes-text">HC-SR501 Ayarlanabilir IR Hareket Algılama Sensörü</h2>
+      <p class="choose__list">
+        Hareket sensörünün +5V ve GND uçlarını bağladık, sinyal pini (IN) ise Raspberry Pi'de belirlediğimiz bir GPIO
+        pinine bağlandı. Devrede, evin içinde hareket algılandığında uyarı verecek şekilde bir sistem oluşturduk.
+      </p>
+    </div>
+  </section>
+  <!-- sol -->
+  <section class="section__container choose__container" id="project-processes">
+    <div class="choose__image"> <br><br>
+      <img src="malzemeler/webcam.jpg" alt="choose" />
+    </div>
+    <div class="choose__content">
+      <h2 class="project-processes-text">WebCam Kamera</h2>
+      <ul class="choose__list">
+        <div>
+          <p>Webcam, eve giriş yaparken görüntümüzü kaydederek gerekli sensörlere veya programlara iletilmesini sağladı.
+            Bu sayede sistem, görüntü işleme ve diğer analiz işlemleri için gereken veriyi aldı.</p>
+        </div>
+      </ul>
+    </div>
+  </section>
+  <!-- sağ -->
+  <section class="section__container explore__container">
+    <div class="explore__image">
+      <img src="malzemeler/Solenoid Kapı Kİlidi.jpg" alt="explore" />
+    </div>
+    <div class="explore__content">
+      <h2 class="project-processes-text">Solenoid Kapı Kilidi </h2>
+      <p class="choose__list">
+        Kapı kilidinin pozitif (+) kutbu röleye, negatif (-) kutbu ise güç kaynağına bağlandı. Yüz tanıma sistemi,
+        kişiyi tanıdığında röle tetikleniyor ve bu sayede kapı kilidi açılıyor. Eğer yüz tanıma sistemi kişiyi
+        tanımazsa, röle normal durumuna dönüyor ve kilit tekrar kilitli konuma geçiyor.
+      </p>
+    </div>
+  </section>
+  <!-- sol -->
+  <section class="section__container choose__container" id="project-processes">
+    <div class="choose__image"> <br><br>
+      <img src="malzemeler/regulator.png" alt="choose" />
+    </div>
+    <div class="choose__content">
+      <h2 class="project-processes-text">Regülator</h2>
+      <ul class="choose__list">
+        <div>
+          <p>Normalde güç kaynağımız bize 3.7 volt sağlıyordu, ancak regülatör kullanarak bu değeri 12 volta kadar
+            yükselttik.</p>
+        </div>
+      </ul>
+    </div>
+  </section>
+  <!-- sağ -->
+  <section class="section__container explore__container">
+    <div class="explore__image">
+      <img src="malzemeler/DHT11 Sıcaklık ve Nem Sensörü.jpg" alt="explore" />
+    </div>
+    <div class="explore__content">
+      <h2 class="project-processes-text">DHT11 Sıcaklık ve Nem Sensörü </h2>
+      <p class="choose__list">
+        DHT11 sensörü breadboard üzerine yerleştirildi ve ardından güç bağlantıları yapıldı. Data çıkışı, Raspberry
+        Pi'nin GPIO 4 pinine bağlandı. Sonrasında, DHT11 sensöründen veri alabilmek için uygun kütüphane kullanılarak
+        program kodu yazıldı. Verinin daha düzgün ve güvenilir alınabilmesi için data çıkışına 10kΩ direnç bağlandı. Bu
+        düzenleme, sensörden alınan verinin doğruluğunu artırdı
+      </p>
+    </div>
+  </section>
+  <!-- sol -->
+  <section class="section__container choose__container" id="project-processes">
+    <div class="choose__image"> <br><br>
+      <img src="malzemeler/Toprak Nemi Algılama Sensörü.jpg" alt="choose" />
+    </div>
+    <div class="choose__content">
+      <h2 class="project-processes-text">Toprak Nemi Algılama Sensörü</h2>
+      <ul class="choose__list">
+        <div>
+          <p>İki adet toprak nem sensörü kullanıldı ve bu sensörler, Raspberry Pi'nin GPIO 17 ve GPIO 27 pinlerine
+            bağlandı. Nem ölçer proplar toprakta yerleştirilerek sensörler, 1 (kuru) veya 0 (ıslak) değeri aldı. Ara
+            değer alınamadığı için analog dijital dönüştürücü (ADC) kullanılması gerekiyordu, ancak stokta
+            bulunmadığından temin edilemedi. Bu sebeple, ara değer kullanmak yerine, 2 sensör kullanılarak durum
+            belirlendi. Sensörlerin propları, saksının iki ucuna yerleştirildi ve toprağın kuru veya ıslaklık durumuna
+            göre sulama pompası kontrol edildi. Eğer her iki sensör de kuru gösteriyorsa, pompa çalıştırıldı; her iki
+            sensör de ıslak gösteriyorsa, pompa durduruldu. Bu sistem, toprağın nem seviyesine göre otomatik sulama
+            işlemini gerçekleştirdi.</p>
+        </div>
+      </ul>
+    </div>
+  </section>
+  <!-- sağ -->
+  <section class="section__container explore__container">
+    <div class="explore__image">
+      <img src="malzemeler/Su Seviyesi Sensörü.jpg" alt="explore" />
+    </div>
+    <div class="explore__content">
+      <h2 class="project-processes-text">Su Seviyesi Sensörü</h2>
+      <p class="choose__list">
+        Su seviye sensörü uygun bir GPIO pinine bağlandı ve sensörden alınan veri Raspberry Pi'ye gönderildi. GPIO
+        pininde çalışan kod, sensörden gelen değeri 0 veya 1 olarak algıladı. Bu değer ana su kaynağında yeterli su olup
+        olmadığını belirlemek için kullanıldı.
+      </p>
+    </div>
+  </section>
+  <!-- sol -->
+  <section class="section__container choose__container" id="project-processes">
+    <div class="choose__image"> <br><br>
+      <img src="malzemeler/Büyük Boy BreadBoard.jpg" alt="choose" />
+    </div>
+    <div class="choose__content">
+      <h2 class="project-processes-text">Büyük Boy BreadBoard</h2>
+      <ul class="choose__list">
+        <div>
+          <p>Sensörlerin bağlantıları breadboard üzerinde yapıldı. Raspberry Pi'nin 4. GPIO pininden 5V güç çıkışı
+            alınarak breadboard'a güç verildi ve 6. GPIO pininden ise ground (toprak) bağlantısı sağlandı. Bu şekilde,
+            sensörlerin düzgün çalışabilmesi için gerekli güç sağlanmış oldu.</p>
+        </div>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- Galeri Bölümü -->
+  <footer>
+    <div class="section__container footer__container" id="gallery">
+      <div class="footer__col">
+        <h3 id="gallery-header">Galeri</h4> <br><br>
+          <div class="footer__col__flex">
+            <img src="resim/1.jpeg" alt="hehe" />
+            <img src="resim/2.jpeg" alt="hehe" />
+            <img src="resim/3.jpeg" alt="hehe" />
+            <img src="resim/4.jpeg" alt="hehe" />
+            <img src="resim/6.jpeg" alt="hehe" />
+            <video width="255px" height="180" controls>
+              <source src="resim/deneme.mp4" type="video/mp4" class="">
+            </video>
+            <img src="resim/10.jpeg" alt="hehe" />
+            <img src="resim/11.jpeg" alt="hehe" />
+            <img src="resim/9.jpeg" alt="hehe" />
+          </div>
+          <br>
+          <br>
+      </div>
+  </footer>
+
+
+  <!-- Sunum ve Poster Bölümü -->
+  <section class="section__container subscribe__container" id="presentation">
+    <div class="download-section" id="malzemeler">
+      <h2>
+        <a href="resim/poster.jpg" download>
+          <span>Poster</span>
+        </a> ve 
+        <a href="https://anlik-veriler.vercel.app/">
+          <span>Sunum videosunu</span>
+        </a> görüntülemek için <br>ilgili yazının üzerine tıklamanız yeterli.
+      </h2>
+      <br><br>
+    </div>
+      <img src="resim/poster.jpg" alt="">
+      <!-- <img src="resim/Gc1rRNNXgAACi6Z.jpg" alt=""> -->
+    </div>
+  </section>
+
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
